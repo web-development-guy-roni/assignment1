@@ -1,0 +1,12 @@
+// Guy-Rozenbaum-214424814-Roni-Taktuk-213207640
+
+### --- בדיקות עבור POSTS --- ###
+
+### 1. הוספת פוסט חדש (Add a New Post)
+POST http://localhost:3000/post
+Content-Type: application/json
+
+{
+    "message": "This is a test post from Guy and Roni",
+    "sender": "Guy123"
+}
