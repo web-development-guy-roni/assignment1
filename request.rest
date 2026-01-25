@@ -1,0 +1,19 @@
+// Guy-Rozenbaum-214424814-Roni-Taktuk-213207640
+
+### --- בדיקות עבור POSTS --- ###
+
+### 1. הוספת פוסט חדש (Add a New Post)
+POST http://localhost:3000/post
+Content-Type: application/json
+
+{
+    "message": "This is a test post from Guy and Roni",
+    "sender": "Guy123"
+}
+
+### 2. קבלת כל הפוסטים (Get All Posts)
+GET http://localhost:3000/post
+
+### 3. קבלת פוסט לפי ID (Get Post by ID)
+# יש להחליף את ה-ID בערך אמיתי שחזר מהבקשה הראשונה
+GET http://localhost:3000/post/6974ef12a0408c4a01ea3bdc
