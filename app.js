@@ -12,6 +12,7 @@ const appPromise = new Promise((resolve, reject) => {
             app.use(bodyParser.urlencoded({ extended: true }));
 
             app.use('/post', require('./routes/post_routes'));
+            app.use('/comment', require('./routes/comment_routes'));
 
             resolve(app);
         })
