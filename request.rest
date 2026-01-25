@@ -10,3 +10,10 @@ Content-Type: application/json
     "message": "This is a test post from Guy and Roni",
     "sender": "Guy123"
 }
+
+### 2. קבלת כל הפוסטים (Get All Posts)
+GET http://localhost:3000/post
+
+### 3. קבלת פוסט לפי ID (Get Post by ID)
+# יש להחליף את ה-ID בערך אמיתי שחזר מהבקשה הראשונה
+GET http://localhost:3000/post/6974ef12a0408c4a01ea3bdc
