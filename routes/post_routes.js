@@ -12,4 +12,10 @@ router.get('/', postController.getAllPosts);
 // קבלת פוסט ספציפי לפי ה-ID שלו
 router.get('/:id', postController.getPostById);
 
+// עדכון פוסט קיים
+router.put('/:id', postController.updatePost);
+
+// מחיקת פוסט
+router.delete('/:id', postController.deletePost);
+
 module.exports = router;
