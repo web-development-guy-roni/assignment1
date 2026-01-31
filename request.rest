@@ -16,14 +16,14 @@ GET http://localhost:3000/post
 
 ### 3. קבלת פוסט לפי ID (Get Post by ID)
 # יש להחליף את ה-ID בערך אמיתי שחזר מהבקשה הראשונה
-GET http://localhost:3000/post/POST_ID_HERE
+GET http://localhost:3000/post/6974ef12a0408c4a01ea3bdc
 
 ### 4. קבלת פוסטים לפי שולח (Get Posts by Sender)
 GET http://localhost:3000/post?sender=Guy123
 
 ### 5. עדכון פוסט (Update a Post)
 # יש להחליף את ה-ID בערך אמיתי
-PUT http://localhost:3000/post/POST_ID_HERE
+PUT http://localhost:3000/post/6974ef12a0408c4a01ea3bdc
 Content-Type: application/json
 
 {
@@ -33,32 +33,33 @@ Content-Type: application/json
 
 ### --- בדיקות עבור COMMENTS --- ###
 
-### 7. הוספת תגובה חדשה (Add a New Comment)
+### 7. יצירת תגובה חדשה (Create Comment)
+# חובה לקשר ל-postId אמיתי שקיים במסד הנתונים
 POST http://localhost:3000/comment
 Content-Type: application/json
 
 {
-    "content": "This is a comment on the post",
-    "sender": "Roni456",
-    "postId": "POST_ID_HERE"
+    "content": "This is a comment on a specific post",
+    "sender": "Roni99",
+    "postId": "65a1234567890abcdef12345"
 }
 
 ### 8. קבלת כל התגובות (Get All Comments)
 GET http://localhost:3000/comment
 
 ### 9. קבלת תגובה לפי ID (Get Comment by ID)
-GET http://localhost:3000/comment/COMMENT_ID_HERE
+GET http://localhost:3000/comment/6974ef4ea0408c4a01ea3be5
 
 ### 10. עדכון תגובה (Update Comment)
-PUT http://localhost:3000/comment/COMMENT_ID_HERE
+PUT http://localhost:3000/comment/6974ef4ea0408c4a01ea3be5
 Content-Type: application/json
 
 {
-    "content": "Updated comment content"
+    "content": "I changed my mind, this is the updated comment"
 }
 
 ### 11. מחיקת תגובה (Delete Comment)
-DELETE http://localhost:3000/comment/COMMENT_ID_HERE
+DELETE http://localhost:3000/comment/6974ef4ea0408c4a01ea3be5
 
-### 12. קבלת תגובות לפי פוסט (Get Comments by Post ID)
-GET http://localhost:3000/comment/post/POST_ID_HERE
+### 12. קבלת כל התגובות המשויכות לפוסט ספציפי (Get Comments by Post ID)
+GET http://localhost:3000/comment/post/6974ef4ea0408c4a01ea3be5
