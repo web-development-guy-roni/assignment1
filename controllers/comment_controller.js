@@ -1,4 +1,4 @@
-// Guy-Rozenbaum-214424814-Roni-Taktuk-213207640
+// Guy-Rozenbaum-214424814-Roni-Taktook-213207640
 const Comment = require('../models/comment_model');
 
 // 1. יצירת תגובה חדשה (Create)
